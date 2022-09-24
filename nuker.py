@@ -10,7 +10,6 @@ ftime = now.strftime("%H:%M:%S")
 
 session = requests.Session()
 
-proxies = open('proxies.txt', 'r').read().split('\n')
 token = input("Bot Token: ")
 prefix = input("Prefix: ")
 stats = input("Status: ")
@@ -90,7 +89,7 @@ async def scr(ctx):
            f"https://discord.com/api/v9/guilds/{guild}/roles",
            headers=headers,
            json=json,
-           proxies={'http' : 'http://' + 'proxy'}
+           
         )
     for i in range(250):
            threading.Thread(
@@ -122,7 +121,7 @@ async def nuke(ctx):
           f"https://discord.com/api/v9/guilds/{guild}/channels",
           headers=headers,
           json=json,
-          proxies={'http' : 'http://' + 'proxy'}
+          
         )
     for i in range(250):
            for channel in list(ctx.guild.channels):   
