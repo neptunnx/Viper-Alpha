@@ -21,9 +21,9 @@ class NitroGenerator:
 				"https://discord.com/api/v7/entitlements/gift-codes/" + code + "?with_application=false&with_subscription_plan=true")
 			data = response.json()
 			if data["message"] == 'Unknown Gift Code':
-				print("Not worked: " + code)
+				print("Not Working: " +"https://discord.gift/"+ code)
 			else:
-				print("Possibly Working: " + code)
+				print("Possibly Working: " +"https://discord.gift/"+ code)
 				file = open("workedcodes.txt", "a+")
 				file.write("\n" + code)
 
