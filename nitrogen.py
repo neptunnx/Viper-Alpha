@@ -25,7 +25,7 @@ class NitroGenerator:
 			else:
 				print("Possibly Working: " +"https://discord.gift/"+ code)
 				file = open("workedcodes.txt", "a+")
-				file.write("\n" +"https://discord.gift/"+ code)
+				file.write("\n"+ code)
 
 
 NitroGenerator()
