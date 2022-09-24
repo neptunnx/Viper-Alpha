@@ -23,7 +23,7 @@ def logo():
                                                                                                       
                                                                                                       
                                                                                                       """)
-  print("""━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0] Resends Logo/Options\n[1] Webhook Spammer\n[2] Vanity Checker\n[3] Viper Nuker\n[4] Phone-Number Generator\n[5] Nitro-Gen\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━""")
+  print("""━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0] Resends Logo/Options\n[1] Webhook Spammer\n[2] Vanity Checker\n[3] Viper Nuker\n[4] Phone-Number Generator\n[5] Nitro-Gen\n[6] Nitro-Checker\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━""")
 
 
 while True:
@@ -42,6 +42,8 @@ while True:
       import numgen
     elif q == "5":
       import nitrogen
+    elif q == "6":
+      import nitrocheck
     else:
       print(f"\nNo such choice {q}.")
 
