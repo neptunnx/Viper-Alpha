@@ -23,7 +23,7 @@ class NitroGenerator:
 			if data["message"] == 'Unknown Gift Code':
 				print("Not worked: " + code)
 			else:
-				print("Worked: " + code)
+				print("Possibly Working: " + code)
 				file = open("workedcodes.txt", "a+")
 				file.write("\n" + code)
 
