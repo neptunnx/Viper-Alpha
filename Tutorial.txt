@@ -1,0 +1,3 @@
+# Make sure you have python installed, you can install at https://www.python.org/
+# Run install dependencies.bat first then run viper.py
+# If you encounter any issues dm me
