@@ -2,6 +2,9 @@ import requests
 import random
 import string
 
+print("This will take a few seconds..")
+print("If you see many *'s that means most are invalid or all are invalid")
+
 with open("workedcodes.txt") as file:
     for line in file.readlines():
         nitro = line.strip("\n")
