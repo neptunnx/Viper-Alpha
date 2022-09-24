@@ -23,7 +23,7 @@ def logo():
                                                                                                       
                                                                                                       
                                                                                                       """)
-  print("""━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0] Resends Logo/Options\n[1] Webhook Spammer\n[2] Vanity Checker\n[3] Viper Nuker\n[4] Phone-Number Generator\n[5] Nitro-Gen\n[6] Nitro-Checker\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━""")
+  print("""━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0] Resends Logo/Options\n[1] Webhook Spammer\n[2] Vanity Checker\n[3] Viper Nuker - Run scrape.py before using this\n[4] Phone-Number Generator\n[5] Nitro-Gen\n[6] Nitro-Checker\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━""")
 
 
 while True:
