@@ -10,7 +10,6 @@ ftime = now.strftime("%H:%M:%S")
 
 session = requests.Session()
 
-channels = open('channels.txt')
 token = input("Token: ")
 prefix = input("Prefix: ")
 stats = input("Status: ")
