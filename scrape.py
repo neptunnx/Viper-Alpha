@@ -1,12 +1,17 @@
 import discord
 from discord.ext import commands
+f = open('members.txt', 'w')
+f.close()
 b = open('channels.txt', 'w')
 b.close()
 k = open('roles.txt', 'w')
+k.close()
+u = open('emojis.txt', 'w')
+u.close()
 TOKEN = input("Enter your bot's token: ")
 intents = discord.Intents.all()
-bot = commands.Bot(command_prefix='null', intents=intents)
-bot.event
+client = commands.Bot(command_prefix='2439x', intents=intents)
+@client.event
 async def on_ready():
     print(f'[SUCCESFUL]  - Logged in as {client.user}.')
     GUILD = int(input("\nGuild ID to scrape: "))
@@ -23,5 +28,5 @@ async def on_ready():
     em = open ('emojis.txt', 'a')
     for emoji in id.emojis:
         em.write(f"{emoji.id}\n")
-    print("Scraped Channels\nScraped Roles\n[SUCCESFUL] - Server has been scraped you may close this window now.")
-bot.run(TOKEN)
+    print("\nScraped Members\nScraped Channels\nScraped Emojis\nScraped Roles\n\n[SUCCESFUL] - Server has been scraped you may close this window now.")
+client.run(TOKEN)
