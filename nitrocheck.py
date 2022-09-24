@@ -2,7 +2,7 @@ import requests
 import random
 import string
 
-with open("Nitro Codes.txt") as file:
+with open("workedcodes.txt") as file:
     for line in file.readlines():
         nitro = line.strip("\n")
 
