@@ -50,10 +50,10 @@ $$ |   $$ |  $$ |  $$ |  $$ |$$ |      $$ |  $$ |      $$$$\ $$ |$$ |$$  / $$ | 
                                                                                      
                                                                                      
                                                                                      """)
-    print(Fore.GREEN+"Commands - nuke,scc,sdc,sdr,scr,spam,swh")
-    print(Fore.GREEN+f"Logged in as {bot.user.name}")
-    print(Fore.GREEN+f"Prefix - {prefix}")
-    print("Remember to Use scrape.py before running the nuker")
+    print("Commands - nuke,scc,sdc,sdr,scr,spam,swh")
+    print(f"Logged in as {bot.user.name}")
+    print(f"Prefix - {prefix}")
+    print("Have fun!")
 
 def logo():
     print(f"Logged in as {bot.user.name}")
