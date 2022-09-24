@@ -38,6 +38,8 @@ while True:
       logo()
     elif q == "3":
       import nuker
+    elif q == "4":
+      import numgen
     else:
       print(f"\nNo such choice {q}.")
 
