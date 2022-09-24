@@ -22,10 +22,6 @@ class NitroGenerator:
 			data = response.json()
 			if data["message"] == 'Unknown Gift Code':
 				print("Not worked: " + code)
-                        elif data["message"] == 'You are being rate limited.':
-                                print('Rate Limited: ' + code)
-                                file = open("ratelimited.txt", "a+")
-                                file.write("\n" + code)
 			else:
 				print("Worked: " + code)
 				file = open("workedcodes.txt", "a+")
