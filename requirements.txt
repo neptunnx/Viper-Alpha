@@ -10,4 +10,3 @@ json
 threading
 random
 aiohttp
-Faker
