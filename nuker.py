@@ -158,8 +158,7 @@ async def on_guild_channel_create(channel):
             for i in range(10000):   
                  await webhook.send(spamdata)
         except:
-            return
-
+            print("Ratelimited")
 
 
 bot.run(token)
